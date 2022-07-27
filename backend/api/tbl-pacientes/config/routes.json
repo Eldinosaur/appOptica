@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tbl-pacientes",
+      "handler": "tbl-pacientes.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tbl-pacientes/count",
+      "handler": "tbl-pacientes.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tbl-pacientes/:id",
+      "handler": "tbl-pacientes.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tbl-pacientes",
+      "handler": "tbl-pacientes.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tbl-pacientes/:id",
+      "handler": "tbl-pacientes.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tbl-pacientes/:id",
+      "handler": "tbl-pacientes.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

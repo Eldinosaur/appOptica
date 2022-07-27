@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tbl_pacientes",
+  "info": {
+    "name": "TblPacientes"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cedula": {
+      "type": "string"
+    },
+    "nombre": {
+      "type": "string"
+    },
+    "apellido": {
+      "type": "string"
+    },
+    "telefono": {
+      "type": "string"
+    },
+    "direccion": {
+      "type": "string"
+    }
+  }
+}
