@@ -1,0 +1,7 @@
+DATABASE: optica
+user: useroptica
+password: Optica2022
+
+Strapi
+user: eldinosaur7u7@outlook.com
+password: Optica2022
