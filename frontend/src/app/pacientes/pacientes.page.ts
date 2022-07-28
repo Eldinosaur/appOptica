@@ -25,7 +25,7 @@ export class PacientesPage implements OnInit {
       console.log(res)
     },err => console.log(err))
   }
-  async eliminarCurso(id){
+  async eliminarPaciente(id){
     const alert = await this.alertController.create({
       header:"Eliminar Paciente",
       message:"Desea eliminar el paciente?",

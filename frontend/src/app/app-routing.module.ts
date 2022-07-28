@@ -8,12 +8,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'pacientes',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {
     path: 'pacientes',
     loadChildren: () => import('./pacientes/pacientes.module').then( m => m.PacientesPageModule)
+  },
+  {
+    path: 'pacientes-form',
+    loadChildren: () => import('./pacientes-form/pacientes-form.module').then( m => m.PacientesFormPageModule)
   },
 ];
 
