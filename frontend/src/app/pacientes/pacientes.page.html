@@ -1,9 +1,12 @@
+
 <ion-header>
   <ion-toolbar>
+    <br>
     <ion-title>Listado de Pacientes</ion-title>
     <div style="text-align: right;">
       <ion-button color="danger" (click) = "logout()"> Cerrar sesion</ion-button>
-    </div>
+    </div>    
+    <br>
   </ion-toolbar>
 </ion-header>
 
@@ -20,8 +23,10 @@
       <div><b>Telefono</b></div>
       <div>{{paciente.telefono}}</div>
 
-      <ion-button color="secondary" [routerLink]="['/','formulario','edit',paciente.id]">Editar</ion-button>
+      <div style="text-align: center;">
+        <ion-button color="secondary" [routerLink]="['/','formulario','edit',paciente.id]">Editar</ion-button>
       <ion-button color="danger" (click)="eliminarPaciente(paciente.id)">Eliminar</ion-button>
+      </div>
     </ion-card-content>
   </ion-card>
 
