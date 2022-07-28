@@ -17,7 +17,7 @@
       <div><b>Telefono</b></div>
       <div>{{paciente.telefono}}</div>
 
-      <ion-button color="secondary">Editar</ion-button>
+      <ion-button color="secondary" [routerLink]="['/','formulario','edit',paciente.id]">Editar</ion-button>
       <ion-button color="danger" (click)="eliminarPaciente(paciente.id)">Eliminar</ion-button>
     </ion-card-content>
   </ion-card>

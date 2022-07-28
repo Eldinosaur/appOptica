@@ -1,6 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+export interface Post{
+  id?:string;
+  nombre: string;
+  apellido: string;
+  cedula:string;
+  direccion:string;
+  telefono:string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -23,10 +32,8 @@ export class PacientesService {
     })
   }
 
-  actualizarPaciente(id:string,nombre:string,apellido:string,cedula:string,direccion:string,telefono:string){
-    return this.http.put(`${this.API}/${id}`,{
-      nombre,apellido,cedula,direccion,telefono
-    })
+  actualizarPaciente(id:string,post:Post){
+    return this.http.put(`${this.API}/${id}`,post)
   }
 
   eliminarPaciente(id:string){

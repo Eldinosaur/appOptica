@@ -15,25 +15,26 @@
     <ion-card-content>
       <ion-item>
         <ion-label position="floating">Nombre</ion-label>
-        <ion-input #nombre></ion-input>
+        <ion-input [(ngModel)]="post.nombre"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Apellido</ion-label>
-        <ion-input #apellido></ion-input>
+        <ion-input [(ngModel)]="post.apellido"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Cedula</ion-label>
-        <ion-input #cedula></ion-input>
+        <ion-input [(ngModel)]="post.cedula"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Direccion</ion-label>
-        <ion-input #direccion></ion-input>
+        <ion-input [(ngModel)]="post.direccion"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="floating">Telefono</ion-label>
-        <ion-input #telefono></ion-input>
+        <ion-input [(ngModel)]="post.telefono"></ion-input>
       </ion-item>
-      <ion-button color="primary" expand="full" (click)="registrarPaciente(nombre,apellido,cedula,direccion,telefono)">Registrar</ion-button>
+      <ion-button color="primary" expand="full" (click)="edit ? actualizarPaciente(): registrarPaciente()">
+        {{edit ? 'Actualizar':'Guardar'}}</ion-button>
     </ion-card-content>
 
   </ion-card>

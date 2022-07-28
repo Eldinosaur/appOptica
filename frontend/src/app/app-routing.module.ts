@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'pacientes-form',
     loadChildren: () => import('./pacientes-form/pacientes-form.module').then( m => m.PacientesFormPageModule)
   },
+  {
+    path: 'formulario/edit/:id',
+    loadChildren: () => import('./pacientes-form/pacientes-form.module').then( m => m.PacientesFormPageModule)
+  },
 ];
 
 @NgModule({
