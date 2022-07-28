@@ -1,9 +1,31 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Pacientes</ion-title>
+    <ion-title>Listado de Pacientes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-card *ngFor = "let paciente of pacientes">
+    <ion-card-header>
+      <ion-card-title>{{paciente.nombre}} {{paciente.apellido}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div><b>Cedula</b></div>
+      <div>{{paciente.cedula}}</div>
+      <div><b>Direccion</b></div>
+      <div>{{paciente.direccion}}</div>
+      <div><b>Telefono</b></div>
+      <div>{{paciente.telefono}}</div>
 
+      <ion-button color="secondary">Editar</ion-button>
+      <ion-button color="danger" (click)="eliminarPaciente(paciente.id)">Eliminar</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button routerLink="/curso-form">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+
+  </ion-fab>
 </ion-content>
