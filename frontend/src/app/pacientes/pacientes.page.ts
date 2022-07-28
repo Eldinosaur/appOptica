@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PacientesService } from '../services/pacientes.service';
 import { AlertController } from '@ionic/angular';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-pacientes',
@@ -10,7 +11,7 @@ import { AlertController } from '@ionic/angular';
 export class PacientesPage implements OnInit {
   pacientes: any = []
 
-  constructor(private pacientesService:PacientesService, private alertController:AlertController) { }
+  constructor(private pacientesService:PacientesService, private alertController:AlertController, private auth:AuthService) { }
 
   ngOnInit():void {
     this.cargarPacientes()
@@ -39,6 +40,9 @@ export class PacientesPage implements OnInit {
       ],
     });
     alert.present()    
+  }
+  logout(){
+    this.auth.logout()
   }
 
 }
